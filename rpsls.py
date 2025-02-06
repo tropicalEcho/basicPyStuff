@@ -16,15 +16,17 @@ WINS = {
 
 regularHelp = """
 COMMANDS:
-CLEAR | CLS                  CLEARS THE SCREEN
-EXIT | QUIT                  KILLS THE GAME
-HELP | H                     PRINTS THIS
-MANUAL | GUIDE | SHELDON     SUMMONS SHELDON FOR HELP
+  HELP           - Prints this.
+  MANUAL | GUIDE - Show detailed game instructions.
+  SHELDON        - Summons Sheldon.
+  CLEAR | CLS    - Clears screen.
+  EXIT | QUIT    - Kills rpsls.
 
-GUIDE:
-ENTER ( SINGLE | SINGLEPLAYER | 1 | ONE | MONO ) IF YOU WANNA PLAY AGAINST COMPUTER
-ENTER ( MULTI | MULTIPLAYER | 2 | TWO | BI | DUO ) IF YOU WANNA PLAY AGAINST A HUMAN
+GAME MODES:
+  SINGLE | SINGLEPLAYER | 1 | ONE | MONO - Play against randomness.
+  MULTI | MULTIPLAYER | 2 | TWO | DUO    - Play against another player.
 """
+
 
 sheldonHelp = """
 SCISSORS cuts PAPER
@@ -47,7 +49,7 @@ def handleCommands(command):
         sys.exit("GOODBYE!")
     elif command in ["MANUAL", "GUIDE", "SHELDON"]:
         print(sheldonHelp)
-    elif command in ["HELP", "H"]:
+    elif command in ["HELP"]:
         print(regularHelp)
     else:
         return False

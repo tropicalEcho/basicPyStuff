@@ -8,22 +8,31 @@ toDos = {}
 selectedList = None
 
 manual = """
-HELP | H                          PRINTS THIS
-LISTS                            SHOWS ALL TODO LISTS
-SELECT <LISTNAME>                SELECTS A TODO LIST
-CREATE <LISTNAME>                CREATES A NEW TODO LIST
-DELETE <LISTNAME>                DELETES A TODO LIST
-ADD | A <TASKNAME>                ADDS ASKED ITEM
-    [-P | --PRIORITY PRIORITY]    SETS PRIORITY OF THE TASK
-    [--STATUS | -S STATUS]        SETS STATUS OF THE TASK
-REMOVE | REM | R <TASKNAME>       REMOVES ASKED ITEM
-UPDATE | U <OLDNAME> <NEWNAME>    EDITS ASKED ITEM AND UPDATES THE VALUES
-    [-P | --PRIORITY PRIORITY]    SETS PRIORITY OF THE TASK
-    [--STATUS | -S STATUS]        SETS PRIORITY OF THE TASK
-WRITE | SHOW | PRINT              WRITES DOWN THE TO DO LIST
-CLEAR | CLS                       CLEARS TERMINAL SCREEN
-EXIT | QUIT                       KILLS THE PROGRAM
+LIST MANAGEMENT:
+  LISTS             - Show all to-do lists.
+  SELECT <LISTNAME> - Select a to-do list.
+  CREATE <LISTNAME> - Create a new to-do list.
+  DELETE <LISTNAME> - Delete a to-do list.
+
+TASK MANAGEMENT:
+  ADD | A <TASKNAME>             - Add a new task.
+      [-P | --PRIORITY <PRIORITY>] - Set task priority.
+      [--STATUS | -S <STATUS>]     - Set task status.
+  REMOVE | REM | R <TASKNAME>    - Remove a task.
+  UPDATE | U <OLDNAME> <NEWNAME> - Update a task name.
+      [-P | --PRIORITY <PRIORITY>] - Set task priority.
+      [--STATUS | -S <STATUS>]     - Set task status.
+
+DISPLAY & UTILITIES:
+  WRITE | SHOW | PRINT - Display the current to-do list.
+  CLEAR | CLS          - Clear the terminal screen.
+  EXIT | QUIT          - Exit the program.
+
+GENERAL:
+  HELP - Show this help message.
 """
+
+
 
 def add2List(taskName="UNTITLED", priority="NOT SET", status="NOT DONE"):
     if selectedList is None:

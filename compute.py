@@ -86,10 +86,11 @@ def clear():
     os.system("cls" if os.name == "nt" else "clear")
 
 helpText = """
-HELP            PRINTS THIS HELP TEXT
-CLEAR | CLS     CLEARS THE SCREEN
-EXIT | QUIT     EXITS THE CALCULATOR
-<EXPRESSION>    CALCULATES THE EXPRESSION (Qalculate style)
+COMMANDS:
+  HELP         - Prints this.
+  CLEAR | CLS  - Clears screen.
+  EXIT | QUIT  - Kills compute.
+  <EXPRESSION> - Computes given expression.
 """
 
 def main():

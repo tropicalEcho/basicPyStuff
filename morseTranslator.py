@@ -4,12 +4,14 @@ def clear():
     os.system("cls" if os.name == "nt" else "clear")
 
 helpText = """
-HELP           PRINTS THIS
-CLEAR | CLS    CLEARS SCREEN
-EXIT | QUIT    KILLS THE PROGRAM
-<TEXT>         TRANSLATES REGULAR TEXT TO MORSE CODE
-<MORSE>        TRANSLATES MORSE CODE TO REGULAR TEXT
+COMMANDS:
+  HELP        - Prints this.
+  CLEAR | CLS - Clears screen.
+  EXIT | QUIT - Kills morseTranslator.
+  <TEXT>      - Translate to Morse code.
+  <MORSE>     - Translate to regular text.
 """
+
 
 MORSE = [
     '.-', '-...', '-.-.', '-..', '.', '..-.', '--.', '....', '..', '.---', '-.-', '.-..', '--', '-.', '---', '.--.', '--.-', '.-.', '...', '-', '..-', '...-', '.--', '-..-', '-.--', '--..',
