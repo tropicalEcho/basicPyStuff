@@ -15,6 +15,3 @@ while True:
     if handleCommands(m := input("SINGLEPLAYER | MULTIPLAYER: ").strip().upper()): continue
     if m not in ["SINGLE", "1", "MULTI", "2", "DUO", "SINGLEPLAYER", "MULTIPLAYER", "MONO", "ONE", "BI"]: print("INVALID CHOICE!"); continue
     while True: playGame(getChoice("PLAYER: "), random.choice(CHARACTERS), True) if m in ["SINGLE", "1", "SINGLEPLAYER", "ONE", "MONO"] else playGame((p1 := getChoice("PLAYER 1: ")), (clear(), getChoice("PLAYER 2: "))[1], False)
-
-
-
