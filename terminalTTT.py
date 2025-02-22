@@ -10,16 +10,7 @@ board = {
     "C3" : "",
 }
 
-def showBoard():
-    for key, value in board.items():
-        print(f"{value}")
-
-def add2board(userInput, location):
-    if userInput in {"x", "o"}:
-        for key, value in board.items():
-            value = userInput if not value and key else value
-
 def main():
-    while True:
-        pass
-showBoard()
+    pass
+if __name__ == "__main__":
+    main()
